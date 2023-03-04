@@ -160,10 +160,10 @@ class users extends connection
     }
     return  -1;
 }
-public function  add($prenom,$nom,$dob,$email,$password,$chemin)
+public function  add($prenom,$nom,$dob,$email,$password,$genre)
 {
     $con=$this->connections();
-    $sql="INSERT INTO `users`(`id`, `prenom`, `nom`, `dob`, `email`, `password`,`file`) VALUES(null,'$prenom','$nom','$dob','$email','$password','$chemin') ";
+    $sql="INSERT INTO `users`(`id`, `prenom`, `nom`, `dob`, `email`, `password`,genre) VALUES(null,'$prenom','$nom','$dob','$email','$password','$genre') ";
     $result=$con->exec($sql);
     if($result)
     {

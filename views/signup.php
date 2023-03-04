@@ -158,8 +158,8 @@
                     <option value="1998">1998</option>
                     <option value="1999">1999</option>
                     <option value="2000">2000</option>
-                    <option value="2000">2001</option>
-                    <option value="2000">2002</option>
+                    <option value="2001">2001</option>
+                    <option value="2002">2002</option>
 
                   </select>
                 </div>
