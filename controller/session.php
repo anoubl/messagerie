@@ -1,5 +1,5 @@
 <?php   
-require "..\models\users.php";
+require "../models/users.php";
 $user=new users();
 session_start();
 if(isset($_POST['login']))
@@ -9,13 +9,14 @@ if(isset($_POST['login']))
     $resultat=$user->tester($email,$password);
     if($resultat!=-1)
     {
-        $user->rederiger(('action.php'));
         $_SESSION['id']=$resultat;
+        $user->online($resultat);
+        $user->rederiger(('action.php'));
+        
     }
     else
     {
-        $user->rederiger(('..\index.php'));
-
+        $user->rederiger('../index.php');
     }
 }
 ?>

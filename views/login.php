@@ -61,9 +61,8 @@
               <div class="col-lg-6">
                 <div class="card-body p-md-5 mx-md-4">
 
-                  <form  method="POST" action="..\messagerie\controller\session.php">
+                  <form  method="POST" action="controller/session.php">
                     <p>Please login to your account</p>
-
                     <div class="form-outline mb-4">
                       <input name="email" type="email" id="form2Example11" class="form-control" placeholder="Phone number or email address"/>
                       <label class="form-label" for="form2Example11">Username</label>
@@ -81,7 +80,7 @@
 
                     <div class="d-flex align-items-center justify-content-center pb-4">
                       <p class="mb-0 me-2">Don't have an account?</p>
-                      <a class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" href="..\messagerie\views\signup.php">Create new</a>  
+                      <a class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" href="views/signup.php">Create new</a>  
                     </div>
                   </form>
                 </div>
@@ -89,7 +88,7 @@
               <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
                 <div class="text-white px-3 py-4 p-md-8 mx-md-8">
                 <h4 class="mb-4"></h4>
-                <img src="..\messagerie\image\oiseau.png"  style=" text-align:center; width:200px; height: 200px;" alt="">
+                <img src="image/oiseau.png"  style=" text-align:center; width:200px; height: 200px;" alt="">
                 </div>
               </div>
             </div>

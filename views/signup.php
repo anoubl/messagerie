@@ -1,3 +1,37 @@
+
+<?php
+
+if(isset($_GET['var']))
+{
+  $var=$_GET['var'];
+  if($var=="true")
+  {
+    echo "
+    <div class='container' id='success-alert'>
+    <script>
+       window.alert('ThankYou !!!!!');
+    </script>
+</div>
+
+    ";
+    
+  }
+  else
+  {
+    echo "
+    <div class='container' id='success-alert'>
+    <script>
+       window.alert('again');
+    </script>
+</div>
+
+    ";
+  }
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,19 +42,14 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
-      integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
-      crossorigin="anonymous"
-    />
+   
+   
   </head>
   <body>
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
-        <div class="row">
+        <div class="row"><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
           <div
             class="col-12 col-sm-8 col-md-6 col-lg-4 offset-sm-2 offset-md-3 offset-lg-4"
           >
@@ -28,7 +57,7 @@
             <p class="lead">
               It's free and you don't have to share your address.
             </p>
-            <form method="POST" action="..\controller\action.php" class="mb-3">
+            <form method="POST" action="../controller/sign.php" class="mb-3">
               <div class="row">
                 <div class="form-group col-12 col-sm-6">
                   <label for="firstName">First name:</label>
@@ -51,6 +80,7 @@
 
                   />
                 </div>
+
               </div>
               <div class="form-group">
                 <label for="email">Email:</label>
@@ -74,7 +104,10 @@
                 />
               </div>
               <label>Birthday:</label>
+              <br>
               <div class="row no-gutters">
+              <table class="table">
+                <td>
                 <div class="form-group col-4">
                   <label for="birthdayDay" class="sr-only">Birthday day</label>
                   <select name="jour" class="form-control" id="birthdayDay">
@@ -112,6 +145,8 @@
                     <option value="31">31</option>
                   </select>
                 </div>
+                </td>
+                <td>
                 <div class="form-group col-4">
                   <label for="birthdayMonth" class="sr-only"
                     >Birthday month</label
@@ -132,10 +167,14 @@
                     <option value="december">December</option>
                   </select>
                 </div>
+                </td>
+                <td>
+
                 <div class="form-group col-4">
                   <label for="birthdayYear" class="sr-only"
                     >Birthday year</label
                   >
+                  <br>
                   <select name="anne" class="form-control" id="birthdayYear">
                     <option value="1980">1980</option>
                     <option value="1981">1981</option>
@@ -163,6 +202,14 @@
 
                   </select>
                 </div>
+                </td>
+
+              </table>
+             
+               
+                <br>
+                
+                
               </div>
               <div class="form-check form-check-inline">
                 <label class="form-check-label">
@@ -189,6 +236,40 @@
                   Woman
                 </label>
               </div>
+
+
+   <br>
+   <br>
+
+
+
+              <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                  <input
+                    type="radio"
+                    name="exampleRadios1"
+                    id="exampleRadios1"
+                    class="form-check-input"
+                    value="Single"
+                    checked
+                  />
+                  Single
+                </label>
+              </div>
+              <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                  <input
+                    type="radio"
+                    name="exampleRadios1"
+                    id="exampleRadios2"
+                    class="form-check-input"
+                    value="married"
+                  />
+                  married
+                </label>
+              </div>
+
+
               <button type="submit" name="sign" class="btn btn-primary btn-block mb-3">
                 Create account
               </button>
@@ -199,7 +280,7 @@
               </div>
               <div class="text-center">
                 <p>or ...</p>
-                <a href="login.php" class="btn btn-success">Login</a>
+                <a href="../index.php" class="btn btn-success">Login</a>
               </div>
             </form>
           </div>
