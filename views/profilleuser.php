@@ -28,13 +28,31 @@
               <div class="card">
                 <div class="card-body">
                   <div class="d-flex flex-column align-items-center text-center">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
-                    <div class="mt-3">
-                    <?php
 
-                      foreach ($row as  $row)
-                       {
+                  <?php
+                  
+foreach ($row as  $row)
+{
+if ($row['genre']=='man')
+{
   ?>
+  <img src="../image/homme.png" alt="Profille" class="rounded-circle" width="150">
+<?php
+}
+else
+{
+  ?>
+<img src="../image/femme.png" alt="Profille" class="rounded-circle" width="150">
+
+
+<?php
+}
+?>
+
+
+                    
+                    <div class="mt-3">
+                 
 
 
                       <h4><?php  echo $row['prenom']." ".$row['nom']; ?></h4>

@@ -524,8 +524,23 @@
                <?php echo $row1['prenom']." ". $row1['nom'];?></span>
                <span class="direct-chat-timestamp pull-left">             <?php echo $row1['created_at'];?></span>
              </div>
+
+             <?php
+               if($row1['genre']=='man')
+               {
+                ?>
+             <img class="direct-chat-img" src="../image/homme.png" alt="Message User Image"><!-- /.direct-chat-img -->
+                     
+             <?php   
+            }
+            else
+            {
+                ?>
+                             <img class="direct-chat-img" src="../image/femme.png" alt="Message User Image"><!-- /.direct-chat-img -->
+          <?php
+        }
+                   ?>
              <!-- /.direct-chat-info -->
-             <img class="direct-chat-img" src="https://bootdey.com/img/Content/user_2.jpg" alt="Message User Image"><!-- /.direct-chat-img -->
              <div class="direct-chat-text " class="font-weight-light">
              <?php echo $row1['message'];?>
              </div>
@@ -562,9 +577,24 @@
                         <span class="direct-chat-timestamp pull-right"> <?php echo $row1['created_at'];?></span>
                       </div>
                       <!-- /.direct-chat-info -->
+                   <?php
+               if($row1['genre']=='man')
+               {
+                ?>
 
-                      <img class="direct-chat-img" src="https://bootdey.com/img/Content/user_1.jpg" alt="Message User Image"><!-- /.direct-chat-img -->
+<img class="direct-chat-img" src="../image/homme.png" alt="Message User Image"><!-- /.direct-chat-img -->
                      
+             <?php   
+            }
+            else
+            {
+                ?>
+          <img class="direct-chat-img" src="../image/femme.png" alt="Message User Image"><!-- /.direct-chat-img -->
+
+          <?php
+        }
+                   ?>
+                    
                       <div class="direct-chat-text">
                       <?php echo $row1['message'];?>
                     </div>

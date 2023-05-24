@@ -218,7 +218,7 @@ if(isset($_GET['var']))
                     name="exampleRadios"
                     id="exampleRadios1"
                     class="form-check-input"
-                    value="Man"
+                    value="man"
                     checked
                   />
                   Man
@@ -231,7 +231,7 @@ if(isset($_GET['var']))
                     name="exampleRadios"
                     id="exampleRadios2"
                     class="form-check-input"
-                    value="Woman"
+                    value="woman"
                   />
                   Woman
                 </label>
